@@ -13,15 +13,13 @@ const SearchRes = () => {
   // const history = useHistory();
   const projects = useSelector((state) => Object.values(state.projects));
 
-  console.log(projects);
-
   return (
     <div id='search-page'>
       <SearchResults />
       { projects &&
         <ul id='search-results-container'>
           {projects.map(project => (
-            <a className='search-link'href={`/projects/${project.id}`}>
+            <a key={project.id} className='search-link'href={`/projects/${project.id}`}>
               <li key={project.id}className="searh-list-component">
                 <img className="search-img" src={`${project.titleImage}`} alt=''></img>
                 <div className="search-text">

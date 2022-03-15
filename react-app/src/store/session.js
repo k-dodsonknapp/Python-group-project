@@ -16,16 +16,15 @@ const initialState = { user: null };
 export const authenticate = () => async (dispatch) => {
   const response = await fetch('/api/auth/', {
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     }
   });
+
   if (response.ok) {
     const data = await response.json();
-    console.log("auth", data)
     if (data.errors) {
       return;
     }
-  
     dispatch(setUser(data));
   }
 }

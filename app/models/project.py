@@ -9,6 +9,7 @@ class Project(db.Model):
     titleImage = db.Column(db.Text, nullable=False)
     overview = db.Column(db.Text, nullable=False)
     category = db.Column(db.String(50), nullable=False)
+    views = db.Column(db.Integer, nullable=False)
 
     user = db.relationship('User', back_populates='project')
     instruction = db.relationship('Instruction', back_populates='project')

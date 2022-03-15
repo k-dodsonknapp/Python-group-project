@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProjects } from "../../store/project";
 import './projectExplore.css'
+import Carousel, { CarouselItem } from "../Carousel";
 
 
 const ProjectExplore = () => {
     const dispatch = useDispatch();
     const projects = useSelector(state => Object.values(state.projects));
+    console.log(projects[0].views, "PPPPPPPPPPP")
 
     useEffect(() => {
         dispatch(getAllProjects());
@@ -20,6 +22,11 @@ const ProjectExplore = () => {
         <div className="explorePage">
             <div className="slideshow-container">
                 <img src="https://media.istockphoto.com/photos/colorful-background-of-pastel-powder-explosionrainbow-color-dust-on-picture-id1180542165?k=20&m=1180542165&s=612x612&w=0&h=43hlhk8qdGYP4V-u3AAxD3kPDRIzHjMNWpr-VdBQ2Js=" alt=""></img>
+                {/* <Carousel>
+                    <CarouselItem>item 1</CarouselItem>
+                    <CarouselItem>item 2</CarouselItem>
+                    <CarouselItem>item 3</CarouselItem>
+                </Carousel> */}
             </div>
             <div className="content-container">
                 <div className="content">

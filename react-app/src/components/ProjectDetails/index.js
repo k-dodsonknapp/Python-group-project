@@ -130,17 +130,17 @@ const ProjectDetails = () => {
           <ul id="supplies-title">
             Supplies Needed:
             {project.supplies.map((supply) => (
-              <>
-                <li className="supply-list" key={supply.id}>
+              <div key={supply.id}>
+                <li className="supply-list" >
                   {supply.supply}
                   
                 </li>
-              </>
+              </div>
             ))}
           </ul>
           <ul>
             {project.instructions.map((instruction) => (
-              <div className="instruction-container">
+              <div className="instruction-container" key={instruction.id}>
                 <div className="instruction-title">
                   Step {instruction.stepOrder} {instruction.stepTitle}:
                 </div>
@@ -183,8 +183,8 @@ const ProjectDetails = () => {
               </button>
             )}
             {reversedComments.map((comment) => (
-              <div>
-                <li className="comments" key={comment.id}>
+              <div key={comment.id}>
+                <li className="comments" >
                   {comment.comment}
                 </li>
                 {+comment.id === +commentId && (

@@ -8,7 +8,8 @@ def seed_project():
         title="How to build a bird house.", 
         titleImage="https://images.unsplash.com/photo-1590238750866-f99d3febe496?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmlyZCUyMGhvdXNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80", 
         overview="This is how to construct a bird house!",
-        category="Crafts"
+        category="Crafts",
+        views=5,
     )
 
     casino_clock= Project(
@@ -22,7 +23,8 @@ def seed_project():
                     Funny motion : by arranging cards randomly, you can enjoy busy motion of flaps 
                     WiFi time acquisition : current time is acquired via WiFi using ntp
                 """,
-        category="Circuits"
+        category="Circuits",
+        views=5,
     )
 
     one_board_mug= Project(
@@ -30,7 +32,8 @@ def seed_project():
         title="One Board Mug", 
         titleImage="https://content.instructables.com/ORIG/FST/TDM1/KZBA18KY/FSTTDM1KZBA18KY.jpg?auto=webp&frame=1&width=612&height=1024&fit=bounds&md=eb345ed6f0c79b14398aa15b45a9edb5", 
         overview="Create a fun and unique drinking vessel from one board of pine.",
-        category="Workshop"
+        category="Workshop",
+        views=5,
     )
 
     skillet_burger= Project(
@@ -63,7 +66,8 @@ def seed_project():
                     1/2 cup BBQ Sauce
                     1/4 cup Pickle Juice
                 """,
-        category="Cooking"
+        category="Cooking",
+        views=5,
     )
 
     james_webb_clock= Project(
@@ -75,7 +79,8 @@ def seed_project():
 
                     If you are interested in the 25 years of engineering that went into building the James Webb Telescope I would recommend watching this episode of Real Engineering
                 """,
-        category="Living"
+        category="Living",
+        views=5,
     )
 
     slowmo_birds= Project(
@@ -85,7 +90,8 @@ def seed_project():
         overview="""
                     With a simple set-up, you can produce excellent photographs of birds in flight--from the comfort of your house! Birds are attractive targets for wildlife photographers. They are aesthetically pleasing, ubiquitous, and charismatic. But once one has mastered the "bird on a stick" photo, a photographer may feel challenged to produce more interesting photos. Bird in flight (BIF) photos are dramatic, but much harder to get. Some degree of chance is usually required, and a long time in the field. The method demonstrated here is relatively simple and allows one to take BIF images in the dead of winter, when birds are most drawn to feeders. Meanwhile, the photographer is warm and cozy.
                 """,
-        category="Outside"
+        category="Outside",
+        views=5,
     )
 
     dragonfly= Project(
@@ -95,7 +101,8 @@ def seed_project():
         overview="""
                     Do you hear about bamboo dragonflies? I played it in my childhood, which kids' hands can make with a stick and long blade fixed on the top of the shaft. Kids can spin the pole with their hands to let it fly high in the air, which looks like a dragonfly. It is a fascinating toy to play with among kids' outdoor activities. This time I made it with Autodesk Tinkercad and the 3D printer.
                 """,
-        category="Teachers"
+        category="Teachers",
+        views=5,
     )
 
     db.session.add(bird_house)
